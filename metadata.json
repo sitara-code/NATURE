@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Zoo Sentinel",
+  "description": "Zoo-Based Biological Early Warning System collecting animal behavior anomalies for real-time geospatial clustering, risk modeling, and geo-targeted emergency warnings.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

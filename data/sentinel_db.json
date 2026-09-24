@@ -1,0 +1,1322 @@
+{
+  "users": [
+    {
+      "id": "user-admin-sd",
+      "email": "admin@sandiegozoo.org",
+      "role": "ZOO_ADMIN",
+      "fullName": "Dr. Evelyn Martinez (Director)",
+      "zooId": "zoo-sd-01",
+      "createdAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "user-master-01",
+      "email": "authority@zoosentinel.int",
+      "role": "MASTER_ADMIN",
+      "fullName": "Global Sentinel Master Controller",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "zk-1790017778589-sf9o",
+      "email": "s.jenkins@sandiegozoo.org",
+      "role": "ZOOKEEPER",
+      "fullName": "Sarah Jenkins",
+      "zooId": "zoo-sd-01",
+      "createdAt": "2026-09-21T19:09:38.589Z"
+    },
+    {
+      "id": "user-admin-delhi",
+      "email": "admin@delhizoo.gov.in",
+      "role": "ZOO_ADMIN",
+      "fullName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "zooId": "zoo-ind-delhi-01",
+      "createdAt": "2026-02-01T00:00:00.000Z"
+    },
+    {
+      "id": "user-admin-mysuru",
+      "email": "admin@mysuruzoo.info",
+      "role": "ZOO_ADMIN",
+      "fullName": "Smt. Rajeshwari S. (Executive Director, Mysuru Zoo)",
+      "zooId": "zoo-ind-mysuru-02",
+      "createdAt": "2026-02-01T00:00:00.000Z"
+    }
+  ],
+  "zoos": [
+    {
+      "id": "zoo-sd-01",
+      "identifier": "ZOO-SD-001",
+      "name": "San Diego Wildlife Alliance & Zoo",
+      "country": "United States",
+      "city": "San Diego, CA",
+      "latitude": 32.7353,
+      "longitude": -117.149,
+      "geofenceRadiusMeters": 1500,
+      "geofencePolygon": [
+        [
+          32.748814,
+          -117.165065
+        ],
+        [
+          32.748814,
+          -117.132935
+        ],
+        [
+          32.721786,
+          -117.132935
+        ],
+        [
+          32.721786,
+          -117.165065
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 4,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "contactEmail": "admin@sandiegozoo.org"
+    },
+    {
+      "id": "zoo-sg-02",
+      "identifier": "ZOO-SG-002",
+      "name": "Mandai Wildlife Reserve / Singapore Zoo",
+      "country": "Singapore",
+      "city": "Mandai",
+      "latitude": 1.4043,
+      "longitude": 103.793,
+      "geofenceRadiusMeters": 1800,
+      "geofencePolygon": [
+        [
+          1.420516,
+          103.776779
+        ],
+        [
+          1.420516,
+          103.809221
+        ],
+        [
+          1.388084,
+          103.809221
+        ],
+        [
+          1.388084,
+          103.776779
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-01-12T00:00:00.000Z",
+      "contactEmail": "admin@mandai.sg"
+    },
+    {
+      "id": "zoo-berlin-03",
+      "identifier": "ZOO-BER-003",
+      "name": "Zoologischer Garten Berlin",
+      "country": "Germany",
+      "city": "Berlin",
+      "latitude": 52.5079,
+      "longitude": 13.3378,
+      "geofenceRadiusMeters": 1200,
+      "geofencePolygon": [
+        [
+          52.518711,
+          13.320038
+        ],
+        [
+          52.518711,
+          13.355562
+        ],
+        [
+          52.497089,
+          13.355562
+        ],
+        [
+          52.497089,
+          13.320038
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "contactEmail": "admin@zoo-berlin.de"
+    },
+    {
+      "id": "zoo-tokyo-04",
+      "identifier": "ZOO-TKO-004",
+      "name": "Tokyo Ueno Zoological Gardens",
+      "country": "Japan",
+      "city": "Tokyo",
+      "latitude": 35.7165,
+      "longitude": 139.7712,
+      "geofenceRadiusMeters": 1400,
+      "geofencePolygon": [
+        [
+          35.729113,
+          139.755666
+        ],
+        [
+          35.729113,
+          139.786734
+        ],
+        [
+          35.703887,
+          139.786734
+        ],
+        [
+          35.703887,
+          139.755666
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-01-20T00:00:00.000Z",
+      "contactEmail": "admin@ueno-zoo.jp"
+    },
+    {
+      "id": "zoo-syd-05",
+      "identifier": "ZOO-SYD-005",
+      "name": "Taronga Conservation Society Australia",
+      "country": "Australia",
+      "city": "Sydney",
+      "latitude": -33.8433,
+      "longitude": 151.2413,
+      "geofenceRadiusMeters": 1600,
+      "geofencePolygon": [
+        [
+          -33.828886,
+          151.223945
+        ],
+        [
+          -33.828886,
+          151.258655
+        ],
+        [
+          -33.857714,
+          151.258655
+        ],
+        [
+          -33.857714,
+          151.223945
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-01-22T00:00:00.000Z",
+      "contactEmail": "admin@taronga.org.au"
+    },
+    {
+      "id": "zoo-ind-delhi-01",
+      "identifier": "ZOO-IND-001",
+      "name": "National Zoological Park (Delhi Zoo)",
+      "country": "India",
+      "city": "New Delhi, Delhi",
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "geofenceRadiusMeters": 1500,
+      "geofencePolygon": [
+        [
+          28.617714,
+          77.228108
+        ],
+        [
+          28.617714,
+          77.258892
+        ],
+        [
+          28.590686,
+          77.258892
+        ],
+        [
+          28.590686,
+          77.228108
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-01T00:00:00.000Z",
+      "contactEmail": "admin@delhizoo.gov.in"
+    },
+    {
+      "id": "zoo-ind-mysuru-02",
+      "identifier": "ZOO-IND-002",
+      "name": "Sri Chamarajendra Zoological Gardens (Mysuru Zoo)",
+      "country": "India",
+      "city": "Mysuru, Karnataka",
+      "latitude": 12.3021,
+      "longitude": 76.6664,
+      "geofenceRadiusMeters": 1400,
+      "geofencePolygon": [
+        [
+          12.314713,
+          76.653491
+        ],
+        [
+          12.314713,
+          76.679309
+        ],
+        [
+          12.289487,
+          76.679309
+        ],
+        [
+          12.289487,
+          76.653491
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-01T00:00:00.000Z",
+      "contactEmail": "admin@mysuruzoo.info"
+    },
+    {
+      "id": "zoo-ind-chennai-03",
+      "identifier": "ZOO-IND-003",
+      "name": "Arignar Anna Zoological Park (Vandalur Zoo)",
+      "country": "India",
+      "city": "Chennai, Tamil Nadu",
+      "latitude": 12.8797,
+      "longitude": 80.0818,
+      "geofenceRadiusMeters": 2000,
+      "geofencePolygon": [
+        [
+          12.897718,
+          80.063316
+        ],
+        [
+          12.897718,
+          80.100284
+        ],
+        [
+          12.861682,
+          80.100284
+        ],
+        [
+          12.861682,
+          80.063316
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-02T00:00:00.000Z",
+      "contactEmail": "director@aazp.in"
+    },
+    {
+      "id": "zoo-ind-bhubaneswar-04",
+      "identifier": "ZOO-IND-004",
+      "name": "Nandankanan Zoological Park",
+      "country": "India",
+      "city": "Bhubaneswar, Odisha",
+      "latitude": 20.3956,
+      "longitude": 85.8247,
+      "geofenceRadiusMeters": 1800,
+      "geofencePolygon": [
+        [
+          20.411816,
+          85.807399
+        ],
+        [
+          20.411816,
+          85.842001
+        ],
+        [
+          20.379384,
+          85.842001
+        ],
+        [
+          20.379384,
+          85.807399
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-02T00:00:00.000Z",
+      "contactEmail": "director@nandankanan.org"
+    },
+    {
+      "id": "zoo-ind-hyderabad-05",
+      "identifier": "ZOO-IND-005",
+      "name": "Nehru Zoological Park",
+      "country": "India",
+      "city": "Hyderabad, Telangana",
+      "latitude": 17.3508,
+      "longitude": 78.4516,
+      "geofenceRadiusMeters": 1800,
+      "geofencePolygon": [
+        [
+          17.367016,
+          78.434611
+        ],
+        [
+          17.367016,
+          78.468589
+        ],
+        [
+          17.334584,
+          78.468589
+        ],
+        [
+          17.334584,
+          78.434611
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-03T00:00:00.000Z",
+      "contactEmail": "curator@hyderabadzoo.in"
+    },
+    {
+      "id": "zoo-ind-kolkata-06",
+      "identifier": "ZOO-IND-006",
+      "name": "Alipore Zoological Gardens (Kolkata Zoo)",
+      "country": "India",
+      "city": "Kolkata, West Bengal",
+      "latitude": 22.5358,
+      "longitude": 88.3317,
+      "geofenceRadiusMeters": 1300,
+      "geofencePolygon": [
+        [
+          22.547512,
+          88.31902
+        ],
+        [
+          22.547512,
+          88.34438
+        ],
+        [
+          22.524088,
+          88.34438
+        ],
+        [
+          22.524088,
+          88.31902
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-03T00:00:00.000Z",
+      "contactEmail": "director@kolkatazoo.in"
+    },
+    {
+      "id": "zoo-ind-darjeeling-07",
+      "identifier": "ZOO-IND-007",
+      "name": "Padmaja Naidu Himalayan Zoological Park",
+      "country": "India",
+      "city": "Darjeeling, West Bengal",
+      "latitude": 27.0583,
+      "longitude": 88.2562,
+      "geofenceRadiusMeters": 1200,
+      "geofencePolygon": [
+        [
+          27.069111,
+          88.24406
+        ],
+        [
+          27.069111,
+          88.26834
+        ],
+        [
+          27.047489,
+          88.26834
+        ],
+        [
+          27.047489,
+          88.24406
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-04T00:00:00.000Z",
+      "contactEmail": "director@pnhzp.gov.in"
+    },
+    {
+      "id": "zoo-ind-bengaluru-08",
+      "identifier": "ZOO-IND-008",
+      "name": "Bannerghatta Biological Park",
+      "country": "India",
+      "city": "Bengaluru, Karnataka",
+      "latitude": 12.8009,
+      "longitude": 77.5777,
+      "geofenceRadiusMeters": 2200,
+      "geofencePolygon": [
+        [
+          12.82072,
+          77.557375
+        ],
+        [
+          12.82072,
+          77.598025
+        ],
+        [
+          12.78108,
+          77.598025
+        ],
+        [
+          12.78108,
+          77.557375
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-04T00:00:00.000Z",
+      "contactEmail": "ed@bannerghattabiologicalpark.org"
+    },
+    {
+      "id": "zoo-ind-mumbai-09",
+      "identifier": "ZOO-IND-009",
+      "name": "Veermata Jijabai Bhosale Botanical Udyan & Zoo (Byculla Zoo)",
+      "country": "India",
+      "city": "Mumbai, Maharashtra",
+      "latitude": 18.9785,
+      "longitude": 72.8335,
+      "geofenceRadiusMeters": 1200,
+      "geofencePolygon": [
+        [
+          18.989311,
+          72.822068
+        ],
+        [
+          18.989311,
+          72.844932
+        ],
+        [
+          18.967689,
+          72.844932
+        ],
+        [
+          18.967689,
+          72.822068
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-05T00:00:00.000Z",
+      "contactEmail": "director@mumbaizoo.gov.in"
+    },
+    {
+      "id": "zoo-ind-vizag-10",
+      "identifier": "ZOO-IND-010",
+      "name": "Indira Gandhi Zoological Park",
+      "country": "India",
+      "city": "Visakhapatnam, Andhra Pradesh",
+      "latitude": 17.7686,
+      "longitude": 83.3444,
+      "geofenceRadiusMeters": 1800,
+      "geofencePolygon": [
+        [
+          17.784816,
+          83.327372
+        ],
+        [
+          17.784816,
+          83.361428
+        ],
+        [
+          17.752384,
+          83.361428
+        ],
+        [
+          17.752384,
+          83.327372
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-05T00:00:00.000Z",
+      "contactEmail": "curator@igzp.ap.gov.in"
+    },
+    {
+      "id": "zoo-ind-guwahati-11",
+      "identifier": "ZOO-IND-011",
+      "name": "Assam State Zoo cum Botanical Garden",
+      "country": "India",
+      "city": "Guwahati, Assam",
+      "latitude": 26.1627,
+      "longitude": 91.7915,
+      "geofenceRadiusMeters": 1600,
+      "geofencePolygon": [
+        [
+          26.177114,
+          91.775441
+        ],
+        [
+          26.177114,
+          91.807559
+        ],
+        [
+          26.148286,
+          91.807559
+        ],
+        [
+          26.148286,
+          91.775441
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-06T00:00:00.000Z",
+      "contactEmail": "dfowildlife@assamstatezoo.in"
+    },
+    {
+      "id": "zoo-ind-pune-12",
+      "identifier": "ZOO-IND-012",
+      "name": "Rajiv Gandhi Zoological Park (Katraj Zoo)",
+      "country": "India",
+      "city": "Pune, Maharashtra",
+      "latitude": 18.4552,
+      "longitude": 73.8587,
+      "geofenceRadiusMeters": 1500,
+      "geofencePolygon": [
+        [
+          18.468714,
+          73.844454
+        ],
+        [
+          18.468714,
+          73.872946
+        ],
+        [
+          18.441686,
+          73.872946
+        ],
+        [
+          18.441686,
+          73.844454
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-06T00:00:00.000Z",
+      "contactEmail": "director@punezoopark.in"
+    },
+    {
+      "id": "zoo-ind-ahmedabad-13",
+      "identifier": "ZOO-IND-013",
+      "name": "Kamla Nehru Zoological Garden (Kankaria Zoo)",
+      "country": "India",
+      "city": "Ahmedabad, Gujarat",
+      "latitude": 23.0063,
+      "longitude": 72.5997,
+      "geofenceRadiusMeters": 1300,
+      "geofencePolygon": [
+        [
+          23.018012,
+          72.586976
+        ],
+        [
+          23.018012,
+          72.612424
+        ],
+        [
+          22.994588,
+          72.612424
+        ],
+        [
+          22.994588,
+          72.586976
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-07T00:00:00.000Z",
+      "contactEmail": "zoo@ahmedabadcity.gov.in"
+    },
+    {
+      "id": "zoo-ind-patna-14",
+      "identifier": "ZOO-IND-014",
+      "name": "Sanjay Gandhi Jaivik Udyan (Patna Zoo)",
+      "country": "India",
+      "city": "Patna, Bihar",
+      "latitude": 25.5976,
+      "longitude": 85.0991,
+      "geofenceRadiusMeters": 1500,
+      "geofencePolygon": [
+        [
+          25.611114,
+          85.084116
+        ],
+        [
+          25.611114,
+          85.114084
+        ],
+        [
+          25.584086,
+          85.114084
+        ],
+        [
+          25.584086,
+          85.084116
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-07T00:00:00.000Z",
+      "contactEmail": "director@patnazoo.in"
+    },
+    {
+      "id": "zoo-ind-udaipur-15",
+      "identifier": "ZOO-IND-015",
+      "name": "Gulab Bagh and Zoo",
+      "country": "India",
+      "city": "Udaipur, Rajasthan",
+      "latitude": 24.5739,
+      "longitude": 73.6934,
+      "geofenceRadiusMeters": 1200,
+      "geofencePolygon": [
+        [
+          24.584711,
+          73.681513
+        ],
+        [
+          24.584711,
+          73.705287
+        ],
+        [
+          24.563089,
+          73.705287
+        ],
+        [
+          24.563089,
+          73.681513
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-08T00:00:00.000Z",
+      "contactEmail": "curator@udaipurzoo.raj.gov.in"
+    },
+    {
+      "id": "zoo-ind-kanpur-16",
+      "identifier": "ZOO-IND-016",
+      "name": "Kanpur Zoological Park (Allen Forest Zoo)",
+      "country": "India",
+      "city": "Kanpur, Uttar Pradesh",
+      "latitude": 26.4952,
+      "longitude": 80.3015,
+      "geofenceRadiusMeters": 1700,
+      "geofencePolygon": [
+        [
+          26.510515,
+          80.284388
+        ],
+        [
+          26.510515,
+          80.318612
+        ],
+        [
+          26.479885,
+          80.318612
+        ],
+        [
+          26.479885,
+          80.284388
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-08T00:00:00.000Z",
+      "contactEmail": "director@allenforestzoo.up.gov.in"
+    },
+    {
+      "id": "zoo-ind-chandigarh-17",
+      "identifier": "ZOO-IND-017",
+      "name": "Chhatbir Zoo (Mahendra Chaudhary Zoological Park)",
+      "country": "India",
+      "city": "Zirakpur / Chandigarh, Punjab",
+      "latitude": 30.5982,
+      "longitude": 76.7909,
+      "geofenceRadiusMeters": 1800,
+      "geofencePolygon": [
+        [
+          30.614416,
+          76.772061
+        ],
+        [
+          30.614416,
+          76.809739
+        ],
+        [
+          30.581984,
+          76.809739
+        ],
+        [
+          30.581984,
+          76.772061
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-09T00:00:00.000Z",
+      "contactEmail": "fielddirector@chhatbirzoo.gov.in"
+    },
+    {
+      "id": "zoo-ind-trivandrum-18",
+      "identifier": "ZOO-IND-018",
+      "name": "Thiruvananthapuram Zoo (Trivandrum Zoo)",
+      "country": "India",
+      "city": "Thiruvananthapuram, Kerala",
+      "latitude": 8.5085,
+      "longitude": 76.9567,
+      "geofenceRadiusMeters": 1200,
+      "geofencePolygon": [
+        [
+          8.519311,
+          76.945769
+        ],
+        [
+          8.519311,
+          76.967631
+        ],
+        [
+          8.497689,
+          76.967631
+        ],
+        [
+          8.497689,
+          76.945769
+        ]
+      ],
+      "verified": true,
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarms": 0,
+      "createdAt": "2026-02-09T00:00:00.000Z",
+      "contactEmail": "director@museumzoo.kerala.gov.in"
+    }
+  ],
+  "zookeepers": [
+    {
+      "id": "zk-1790017778589-sf9o",
+      "zooId": "zoo-sd-01",
+      "fullName": "Sarah Jenkins",
+      "badgeNumber": "ZK-SD-101",
+      "email": "s.jenkins@sandiegozoo.org",
+      "active": true,
+      "createdAt": "2026-09-21T19:09:38.589Z",
+      "hasActiveAccessCode": true,
+      "lastActiveAt": "2026-09-21T19:09:40.568Z"
+    }
+  ],
+  "accessCodes": [
+    {
+      "id": "code-1790017778589",
+      "zooId": "zoo-sd-01",
+      "zookeeperId": "zk-1790017778589-sf9o",
+      "codeHash": "0e1fab9e5821e38f1866b103fc147af3a8f7477e80f16bf08e03050a63694130",
+      "active": true,
+      "createdAt": "2026-09-21T19:09:38.589Z"
+    }
+  ],
+  "observations": [
+    {
+      "zooId": "zoo-sd-01",
+      "zookeeperId": "zk-1790017778589-sf9o",
+      "zookeeperName": "Sarah Jenkins",
+      "zooName": "San Diego Wildlife Alliance & Zoo",
+      "species": "Giraffe",
+      "totalAnimals": 10,
+      "animalsShowingBehaviour": 6,
+      "durationMinutes": 45,
+      "abnormalityPercentage": 60,
+      "behaviourCategory": "Sudden fleeing",
+      "description": "Giraffes pacing rapidly along northern fence and refusing shelter entry.",
+      "severity": 4,
+      "latitude": 32.7353,
+      "longitude": -117.149,
+      "gpsAccuracy": 5,
+      "observedAt": "2026-09-24T03:30:00.000Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790017790600-hqi4",
+      "createdAt": "2026-09-24T03:30:00.000Z"
+    },
+    {
+      "zooId": "zoo-sd-01",
+      "zookeeperId": "zk-1790017778589-sf9o",
+      "zookeeperName": "Sarah Jenkins",
+      "zooName": "San Diego Wildlife Alliance & Zoo",
+      "species": "Elephant",
+      "totalAnimals": 8,
+      "animalsShowingBehaviour": 7,
+      "durationMinutes": 35,
+      "abnormalityPercentage": 88,
+      "behaviourCategory": "Repeated agitation",
+      "description": "Herd leader trumpeting, stomping front feet repeatedly and forming tight defensive circle.",
+      "severity": 4,
+      "latitude": 32.736,
+      "longitude": -117.1485,
+      "gpsAccuracy": 4,
+      "observedAt": "2026-09-24T03:45:00.000Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790017790601-elep",
+      "createdAt": "2026-09-24T03:45:00.000Z"
+    },
+    {
+      "zooId": "zoo-sd-01",
+      "zookeeperId": "zk-1790017778589-sf9o",
+      "zookeeperName": "Sarah Jenkins",
+      "zooName": "San Diego Wildlife Alliance & Zoo",
+      "species": "Crocodile",
+      "totalAnimals": 6,
+      "animalsShowingBehaviour": 5,
+      "durationMinutes": 40,
+      "abnormalityPercentage": 83,
+      "behaviourCategory": "Burrowing animals emerging",
+      "description": "Adult crocodiles rapidly abandoning water pools and climbing up onto dry concrete banks, hissing.",
+      "severity": 4,
+      "latitude": 32.7348,
+      "longitude": -117.1495,
+      "gpsAccuracy": 5,
+      "observedAt": "2026-09-24T03:52:00.000Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790017790602-croc",
+      "createdAt": "2026-09-24T03:52:00.000Z"
+    },
+    {
+      "zooId": "zoo-sd-01",
+      "zookeeperId": "zk-1790017778589-sf9o",
+      "zookeeperName": "Sarah Jenkins",
+      "zooName": "San Diego Wildlife Alliance & Zoo",
+      "species": "Hummingbird",
+      "totalAnimals": 25,
+      "animalsShowingBehaviour": 22,
+      "durationMinutes": 30,
+      "abnormalityPercentage": 88,
+      "behaviourCategory": "Abnormal vocalization",
+      "description": "Aviary songbirds exhibiting erratic high-pitch alarm chirping and low circling flights near ground.",
+      "severity": 3,
+      "latitude": 32.7355,
+      "longitude": -117.1478,
+      "gpsAccuracy": 4,
+      "observedAt": "2026-09-24T04:00:00.000Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790017790603-bird",
+      "createdAt": "2026-09-24T04:00:00.000Z"
+    }
+  ],
+  "riskAnalyses": [
+    {
+      "id": "RISK-1790017790602-single",
+      "analysisTime": "2026-09-21T19:09:50.602Z",
+      "eventType": "Unclassified",
+      "riskScore": 25,
+      "confidence": "Low",
+      "observationCount": 1,
+      "zooCount": 1,
+      "speciesCount": 1,
+      "centerLatitude": 32.7353,
+      "centerLongitude": -117.149,
+      "estimatedRadiusKm": 1,
+      "estimatedTimeWindow": "N/A — Minimum 2 verified observations required for hazard cluster",
+      "explanation": [
+        "1 verified observation in active window.",
+        "No significant cluster detected (clustering threshold requires ≥ 2 verified observations within 15 km and 2 hours).",
+        "ML Pipeline: Random Forest evaluated numerical feature vector (Abnormality: 60%, Duration: 45m, Tree Score: 58/100).",
+        "Isolated anomaly — awaiting corroboration."
+      ],
+      "factors": {
+        "temporalClustering": 5,
+        "spatialClustering": 5,
+        "crossSpeciesAgreement": 0,
+        "observationSeverity": 8,
+        "independentZoos": 0,
+        "environmentalCorroboration": 0,
+        "uncertaintyDeduction": 20
+      },
+      "hazardBreakdown": {
+        "Earthquake": 0,
+        "Storm": 0,
+        "Cyclone": 0,
+        "Wildfire": 0,
+        "Unclassified": 10
+      },
+      "observationsIncluded": [
+        "obs-1790017790600-hqi4"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    }
+  ],
+  "alerts": [],
+  "auditLogs": [
+    {
+      "id": "audit-1790256390932-e14y",
+      "timestamp": "2026-09-24T13:26:30.932Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "ZOO_ADMIN_LOGIN",
+      "details": "Successful login for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790017790600-9i84",
+      "timestamp": "2026-09-21T19:09:50.600Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790017778589-sf9o",
+      "actorName": "Sarah Jenkins",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Giraffe (Sudden fleeing) at San Diego Wildlife Alliance & Zoo"
+    },
+    {
+      "id": "audit-1790017780568-7n8s",
+      "timestamp": "2026-09-21T19:09:40.568Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790017778589-sf9o",
+      "actorName": "Sarah Jenkins",
+      "action": "ZOOKEEPER_LOGIN",
+      "details": "Zookeeper authenticated for San Diego Wildlife Alliance & Zoo"
+    },
+    {
+      "id": "audit-1790017778590-32o3",
+      "timestamp": "2026-09-21T19:09:38.590Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-sd",
+      "actorName": "Dr. Evelyn Martinez (Director)",
+      "action": "CREATE_ZOOKEEPER",
+      "details": "Created zookeeper Sarah Jenkins (ZK-SD-101) with generated access code."
+    },
+    {
+      "id": "audit-1790017776155-seja",
+      "timestamp": "2026-09-21T19:09:36.155Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-sd",
+      "actorName": "Dr. Evelyn Martinez (Director)",
+      "action": "ZOO_ADMIN_LOGIN",
+      "details": "Successful login for San Diego Wildlife Alliance & Zoo"
+    },
+    {
+      "id": "audit-1789916623914-6obm",
+      "timestamp": "2026-09-20T15:03:43.914Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-sd",
+      "actorName": "Dr. Evelyn Martinez (Director)",
+      "action": "SYSTEM_RESET_CLEAN",
+      "details": "Database state reset to pure zero records (0 zookeepers, 0 observations, 0 alerts, 0 fake risk)."
+    },
+    {
+      "id": "audit-1789916623913",
+      "timestamp": "2026-09-20T15:03:43.913Z",
+      "actorRole": "SYSTEM",
+      "actorId": "system-init",
+      "actorName": "Zoo Sentinel Engine",
+      "action": "SYSTEM_BOOT",
+      "details": "Zoo Sentinel Production Database initialized with 5 verified institutional registries. Zero prior observations."
+    }
+  ],
+  "truthRatings": [
+    {
+      "zooId": "zoo-sd-01",
+      "zooName": "San Diego Wildlife Alliance & Zoo",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-sg-02",
+      "zooName": "Mandai Wildlife Reserve / Singapore Zoo",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-berlin-03",
+      "zooName": "Zoologischer Garten Berlin",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-tokyo-04",
+      "zooName": "Tokyo Ueno Zoological Gardens",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-syd-05",
+      "zooName": "Taronga Conservation Society Australia",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-mysuru-02",
+      "zooName": "Sri Chamarajendra Zoological Gardens (Mysuru Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-chennai-03",
+      "zooName": "Arignar Anna Zoological Park (Vandalur Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-bhubaneswar-04",
+      "zooName": "Nandankanan Zoological Park",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-hyderabad-05",
+      "zooName": "Nehru Zoological Park",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-kolkata-06",
+      "zooName": "Alipore Zoological Gardens (Kolkata Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-darjeeling-07",
+      "zooName": "Padmaja Naidu Himalayan Zoological Park",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-bengaluru-08",
+      "zooName": "Bannerghatta Biological Park",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-mumbai-09",
+      "zooName": "Veermata Jijabai Bhosale Botanical Udyan & Zoo (Byculla Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-vizag-10",
+      "zooName": "Indira Gandhi Zoological Park",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-guwahati-11",
+      "zooName": "Assam State Zoo cum Botanical Garden",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-pune-12",
+      "zooName": "Rajiv Gandhi Zoological Park (Katraj Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-ahmedabad-13",
+      "zooName": "Kamla Nehru Zoological Garden (Kankaria Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-patna-14",
+      "zooName": "Sanjay Gandhi Jaivik Udyan (Patna Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-udaipur-15",
+      "zooName": "Gulab Bagh and Zoo",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-kanpur-16",
+      "zooName": "Kanpur Zoological Park (Allen Forest Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-chandigarh-17",
+      "zooName": "Chhatbir Zoo (Mahendra Chaudhary Zoological Park)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    },
+    {
+      "zooId": "zoo-ind-trivandrum-18",
+      "zooName": "Thiruvananthapuram Zoo (Trivandrum Zoo)",
+      "truthRating": 0,
+      "totalReports": 0,
+      "confirmedCorrelations": 0,
+      "falseAlarmRate": 0,
+      "hasEnoughHistory": false,
+      "history": []
+    }
+  ],
+  "credentials": {
+    "user-admin-sd": {
+      "passwordHash": "f688a81e54b95cc19d045ab634deb4f88cecdb3653914fe5e69a1d0b25dfe84b",
+      "salt": "sentinel-fixed-salt-2026"
+    },
+    "user-admin-delhi": {
+      "passwordHash": "f688a81e54b95cc19d045ab634deb4f88cecdb3653914fe5e69a1d0b25dfe84b",
+      "salt": "sentinel-fixed-salt-2026"
+    },
+    "user-admin-mysuru": {
+      "passwordHash": "f688a81e54b95cc19d045ab634deb4f88cecdb3653914fe5e69a1d0b25dfe84b",
+      "salt": "sentinel-fixed-salt-2026"
+    },
+    "user-master-01": {
+      "passwordHash": "09c13ffc96e80033ed9c47d494781abb30cec3ab27dd60e1137eabae5736036e",
+      "salt": "sentinel-fixed-salt-2026"
+    }
+  },
+  "dispatchedSMS": []
+}

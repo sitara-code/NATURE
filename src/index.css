@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #e8f4fc;
+    --card-bg: #ffffff;
+    --border-subtle: #bae6fd;
+    --heading-color: #0f172a;
+    --text-primary: #172554;
+    --text-violet: #2e1065;
+  }
+
+  .dark {
+    --bg-main: #060e0a;
+    --card-bg: #0c1a14;
+    --border-subtle: #132e22;
+    --heading-color: #ffffff;
+    --text-primary: #f1f5f9;
+    --text-violet: #67e8f9;
+  }
+
+  /* Guarantee 100% opaque text in light mode - no faded or low-opacity grey text */
+  html:not(.dark) body {
+    color: #172554;
+    background-color: #e8f4fc;
+  }
+}
+
+/* Custom Aqua/Teal & Dark Blue Bio-Pulse Accents and Glows */
+.bio-glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(13, 148, 136, 0.35), 0 0 10px -3px rgba(13, 148, 136, 0.2);
+}
+
+.bio-glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.35), 0 0 10px -3px rgba(6, 182, 212, 0.2);
+}
+
+.bio-glow-sky {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.35), 0 0 10px -3px rgba(14, 165, 233, 0.2);
+}
+
+.bio-glow-amber {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3), 0 0 10px -3px rgba(245, 158, 11, 0.15);
+}
+
+/* Light Sky-Blue Grid Pattern with Aqua accents */
+.bg-nature-grid-light {
+  background-color: #e8f4fc;
+  background-image: radial-gradient(rgba(14, 165, 233, 0.2) 1.2px, transparent 1.2px),
+                    radial-gradient(rgba(13, 148, 136, 0.18) 1.2px, transparent 1.2px);
+  background-size: 32px 32px, 16px 16px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Dark Green/Teal Grid Pattern with Aqua accents */
+.bg-nature-grid-dark {
+  background-color: #060e0a;
+  background-image: radial-gradient(rgba(16, 185, 129, 0.16) 1px, transparent 1px),
+                    radial-gradient(rgba(6, 182, 212, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px, 16px 16px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Infrasound Acoustic Waveform Pulse */
+@keyframes wavePulse {
+  0%, 100% {
+    transform: scaleY(0.3);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-wave-1 {
+  animation: wavePulse 1.4s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: wavePulse 1.1s ease-in-out infinite 0.2s;
+}
+.animate-wave-3 {
+  animation: wavePulse 1.7s ease-in-out infinite 0.4s;
+}
+.animate-wave-4 {
+  animation: wavePulse 1.3s ease-in-out infinite 0.1s;
+}
+.animate-wave-5 {
+  animation: wavePulse 1.6s ease-in-out infinite 0.5s;
+}
+.animate-wave-6 {
+  animation: wavePulse 1.2s ease-in-out infinite 0.3s;
+}

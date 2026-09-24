@@ -15,6 +15,8 @@ import {
   Compass,
   FileSpreadsheet,
 } from 'lucide-react';
+
+const ZOOKEEPER_ACCESS_CODE_KEY = 'zoo_sentinel_access_code_modal';
 import { api } from '../lib/api';
 import { Zoo, Zookeeper, User } from '../types';
 
@@ -47,6 +49,28 @@ export const ZooManagementView: React.FC<ZooManagementViewProps> = ({
   // Geofence calibration state
   const [calibrating, setCalibrating] = useState(false);
   const [geofenceMessage, setGeofenceMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const savedCode = sessionStorage.getItem(ZOOKEEPER_ACCESS_CODE_KEY);
+    if (!savedCode) return;
+
+    try {
+      const parsed = JSON.parse(savedCode) as { keeperName?: string; code?: string } | null;
+      if (parsed?.code && parsed?.keeperName) {
+        setNewAccessCodeModal({ keeperName: parsed.keeperName, code: parsed.code });
+      }
+    } catch {
+      sessionStorage.removeItem(ZOOKEEPER_ACCESS_CODE_KEY);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (newAccessCodeModal) {
+      sessionStorage.setItem(ZOOKEEPER_ACCESS_CODE_KEY, JSON.stringify(newAccessCodeModal));
+    } else {
+      sessionStorage.removeItem(ZOOKEEPER_ACCESS_CODE_KEY);
+    }
+  }, [newAccessCodeModal]);
 
   useEffect(() => {
     loadZookeepers();
@@ -90,6 +114,11 @@ export const ZooManagementView: React.FC<ZooManagementViewProps> = ({
     } finally {
       setSubmittingKeeper(false);
     }
+  };
+
+  const dismissAccessCodeModal = () => {
+    setNewAccessCodeModal(null);
+    sessionStorage.removeItem(ZOOKEEPER_ACCESS_CODE_KEY);
   };
 
   const handleRegenerateCode = async (keeperId: string, name: string) => {
@@ -464,7 +493,7 @@ export const ZooManagementView: React.FC<ZooManagementViewProps> = ({
             </p>
 
             <button
-              onClick={() => setNewAccessCodeModal(null)}
+              onClick={dismissAccessCodeModal}
               className="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-xs"
             >
               I Have Securely Distributed This Code

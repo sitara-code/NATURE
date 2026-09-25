@@ -248,6 +248,7 @@ export const api = {
       mlCsv?: string;
       randomForestScore?: number;
       alert: Alert | null;
+      prediction: Record<string, unknown> | null;
     }>('/api/observations', {
       method: 'POST',
       body: JSON.stringify(data),

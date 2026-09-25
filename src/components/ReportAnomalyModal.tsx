@@ -82,6 +82,7 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [hazardProbability, setHazardProbability] = useState<number | null>(null);
 
   // Computed Abnormality Percentage: (Animals showing this behaviour / Total animals) * 100
   const totalNum =
@@ -257,6 +258,9 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
       });
 
       setSuccessMsg(res.message || 'Observation successfully recorded.');
+      if (typeof res.prediction?.hazard_probability === 'number') {
+        setHazardProbability(res.prediction.hazard_probability);
+      }
       onObservationSubmitted();
 
       setTimeout(() => {
@@ -278,10 +282,59 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
     }
   };
 
-  if (!isOpen) return null;
+  const predictionDialog = hazardProbability !== null ? (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs p-4">
+      <div
+        id="modal-hazard-probability"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="hazard-probability-title"
+        className="bg-white dark:bg-[#0c1a14] border border-teal-200 dark:border-emerald-950 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden text-blue-950 dark:text-slate-200"
+      >
+        <div className="flex items-center justify-between px-6 py-4 border-b border-teal-200 dark:border-emerald-950/80 bg-sky-100/70 dark:bg-[#060e0a]/90">
+          <div className="flex items-center space-x-2">
+            <CheckCircle2 className="w-5 h-5 text-teal-700 dark:text-emerald-400" />
+            <h2 id="hazard-probability-title" className="text-base font-bold font-mono tracking-tight text-blue-950 dark:text-white">
+              HAZARD PROBABILITY
+            </h2>
+          </div>
+          <button
+            type="button"
+            aria-label="Close hazard probability"
+            onClick={() => setHazardProbability(null)}
+            className="text-violet-950 hover:text-blue-950 dark:text-slate-300 dark:hover:text-white p-1.5 rounded-lg hover:bg-sky-200 dark:hover:bg-slate-800 transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div className="p-4 rounded-2xl bg-teal-50 dark:bg-emerald-950/30 border border-teal-200 dark:border-emerald-800 text-center">
+            <p className="text-[11px] uppercase tracking-wider text-violet-950 dark:text-slate-300 font-bold">
+              Submitted observation risk estimate
+            </p>
+            <p className="mt-2 text-4xl font-mono font-bold text-blue-950 dark:text-white">
+              {hazardProbability}%
+            </p>
+          </div>
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => setHazardProbability(null)}
+              className="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  ) : null;
+
+  if (!isOpen) return predictionDialog;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs p-4 overflow-y-auto">
+    <>
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs p-4 overflow-y-auto">
       <div
         id="modal-report-anomaly"
         className="bg-white dark:bg-[#0c1a14] border border-teal-200 dark:border-emerald-950 rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden text-blue-950 dark:text-slate-200 my-8"
@@ -768,6 +821,8 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
           </div>
         </form>
       </div>
-    </div>
+      </div>
+      {predictionDialog}
+    </>
   );
 };

@@ -71,7 +71,7 @@ async function predictObservationWithFastAPI(observation: {
   severity: number;
   abnormalityPercentage?: number;
   durationMinutes?: number;
-}): Promise<void> {
+}): Promise<Record<string, unknown> | null> {
   try {
     const response = await fetch(FASTAPI_PREDICT_URL, {
       method: 'POST',
@@ -100,8 +100,10 @@ async function predictObservationWithFastAPI(observation: {
     const outputPath = path.join(OBSERVATION_HAZARD_PROBABILITY_DIR, `${observation.id}.json`);
     fs.writeFileSync(outputPath, `${JSON.stringify(result, null, 2)}\n`, 'utf8');
     console.log(`[FastAPI] Saved observation hazard probability to ${outputPath}`);
+    return result;
   } catch (err: any) {
     console.error(`[FastAPI] Failed to predict observation ${observation.id}:`, err.message || err);
+    return null;
   }
 }
 
@@ -955,7 +957,7 @@ app.post('/api/observations', requireAuth, async (req, res) => {
     const observationMlCsv = convertObservationsToMLCSV([observation]);
     const rfResult = randomForestModel.predictFromCSV(observationMlCsv);
 
-    await predictObservationWithFastAPI(observation);
+    const prediction = await predictObservationWithFastAPI(observation);
     await sendObservationEmailWithFastAPI(observation.id);
 
     res.json({
@@ -966,6 +968,7 @@ app.post('/api/observations', requireAuth, async (req, res) => {
       mlCsv: observationMlCsv,
       randomForestScore: rfResult.riskScore,
       alert: alertCreated,
+      prediction,
     });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message || 'Internal error processing observation' });

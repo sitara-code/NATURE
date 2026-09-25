@@ -16,6 +16,12 @@ import { Alert, User, ALLOWED_ANIMALS, ALLOWED_BEHAVIOURS } from './src/types.js
 
 const app = express();
 const PORT = 3000;
+const FASTAPI_URL = process.env.FASTAPI_URL || 'http://127.0.0.1:8000/process-observation';
+const OBSERVATION_HAZARD_PROBABILITY_DIR = path.join(
+  process.cwd(),
+  'data',
+  'observation_hazard_probability'
+);
 
 // Middleware
 app.use(express.json({ limit: '50mb' }));
@@ -25,6 +31,9 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 const UPLOADS_DIR = path.join(process.cwd(), 'uploads');
 if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+}
+if (!fs.existsSync(OBSERVATION_HAZARD_PROBABILITY_DIR)) {
+  fs.mkdirSync(OBSERVATION_HAZARD_PROBABILITY_DIR, { recursive: true });
 }
 app.use('/uploads', express.static(UPLOADS_DIR));
 
@@ -53,6 +62,36 @@ const upload = multer({
     cb(new Error('Invalid media type. Only JPG, PNG, WEBP, and MP4/WEBM videos are permitted.'));
   },
 });
+
+async function processObservationWithFastAPI(observation: object & { id: string }): Promise<void> {
+  try {
+    const response = await fetch(FASTAPI_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(observation),
+      signal: AbortSignal.timeout(10_000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`FastAPI returned HTTP ${response.status}`);
+    }
+
+    const result = (await response.json()) as {
+      observationHazardProbability?: unknown;
+    };
+    const hazardProbability = result.observationHazardProbability;
+
+    if (!hazardProbability || typeof hazardProbability !== 'object' || Array.isArray(hazardProbability)) {
+      throw new Error('FastAPI response did not contain a valid observationHazardProbability object');
+    }
+
+    const outputPath = path.join(OBSERVATION_HAZARD_PROBABILITY_DIR, `${observation.id}.json`);
+    fs.writeFileSync(outputPath, `${JSON.stringify(hazardProbability, null, 2)}\n`, 'utf8');
+    console.log(`[FastAPI] Saved observation hazard probability to ${outputPath}`);
+  } catch (err: any) {
+    console.error(`[FastAPI] Failed to process observation ${observation.id}:`, err.message || err);
+  }
+}
 
 // Simple secure token session store in memory
 const sessions: Map<string, { userId: string; role: string; zooId?: string; expiresAt: number }> =
@@ -881,6 +920,8 @@ app.post('/api/observations', requireAuth, async (req, res) => {
     // Generate ML-ready CSV representation for this observation (pure numerical features)
     const observationMlCsv = convertObservationsToMLCSV([observation]);
     const rfResult = randomForestModel.predictFromCSV(observationMlCsv);
+
+    await processObservationWithFastAPI(observation);
 
     res.json({
       success: true,

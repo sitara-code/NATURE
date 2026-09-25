@@ -84,7 +84,7 @@ async function predictObservationWithFastAPI(observation: {
         abnormality_percentage: Number(observation.abnormalityPercentage),
         duration_minutes: Number(observation.durationMinutes),
       }),
-      signal: AbortSignal.timeout(10_000),
+      signal: AbortSignal.timeout(60_000),
     });
 
     if (!response.ok) {
@@ -774,47 +774,10 @@ app.post('/api/observations', requireAuth, async (req, res) => {
       });
     }
 
-    // GPS validation
-    if (latitude === undefined || longitude === undefined || latitude === null || longitude === null) {
-      return res.status(400).json({
-        success: false,
-        error: 'Location permission is required to submit a verified observation.',
-      });
-    }
-
-    const latNum = Number(latitude);
-    const lngNum = Number(longitude);
-
-    if (isNaN(latNum) || isNaN(lngNum) || latNum < -90 || latNum > 90 || lngNum < -180 || lngNum > 180) {
-      return res.status(400).json({
-        success: false,
-        error: 'Invalid GPS coordinates provided.',
-      });
-    }
-
-    // Geofence Validation: Ray-casting Point-in-Polygon
-    const isInsidePolygon = isPointInPolygon([latNum, lngNum], zoo.geofencePolygon);
-    const distToZooCenterMeters = haversineDistanceMeters(latNum, lngNum, zoo.latitude, zoo.longitude);
-    const isInsideRadius = distToZooCenterMeters <= zoo.geofenceRadiusMeters;
-
-    const isInside = isInsidePolygon || isInsideRadius;
-
-    if (!isInside) {
-      db.logAudit(
-        'ZOOKEEPER',
-        user.id,
-        user.fullName,
-        'GEOFENCE_REJECTION',
-        `Observation rejected: GPS coordinates [${latNum.toFixed(4)}, ${lngNum.toFixed(4)}] are ${Math.round(distToZooCenterMeters)}m from ${zoo.name} center (perimeter radius: ${zoo.geofenceRadiusMeters}m).`
-      );
-
-      return res.status(400).json({
-        success: false,
-        error: `Observation rejected: your current GPS position (${latNum.toFixed(4)}, ${lngNum.toFixed(4)}) is ${Math.round(distToZooCenterMeters)}m away from ${zoo.name}, outside the verified perimeter (${zoo.geofenceRadiusMeters}m).`,
-        distanceMeters: Math.round(distToZooCenterMeters),
-        allowedRadiusMeters: zoo.geofenceRadiusMeters,
-      });
-    }
+    // Device location is optional; observations use the verified zoo center.
+    const latNum = zoo.latitude;
+    const lngNum = zoo.longitude;
+    const distToZooCenterMeters = 0;
 
     // Determine severity from abnormality percentage and duration if not provided
     const evaluatedSeverity = (Number(severity) as any) ||

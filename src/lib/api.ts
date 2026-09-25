@@ -233,9 +233,9 @@ export const api = {
     intensity: number;
     description: string;
     severity?: number;
-    latitude: number;
-    longitude: number;
-    gpsAccuracy: number;
+    latitude?: number;
+    longitude?: number;
+    gpsAccuracy?: number;
     observedAt: string;
     mediaUrl?: string;
     mediaType?: 'image' | 'video';

@@ -190,15 +190,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center space-x-2">
               <h1 className="text-lg font-black tracking-tight text-blue-950 dark:text-white font-mono flex items-center">
-                ZOO<span className="text-teal-600 dark:text-cyan-400 ml-1">SENTINEL</span>
+                LIVING<span className="text-teal-600 dark:text-cyan-400 ml-1">LENSE</span>
               </h1>
               <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-teal-100 dark:bg-emerald-950/80 text-blue-950 dark:text-emerald-300 border border-teal-300 dark:border-emerald-800 font-mono">
                 FIELD OBSERVATORY
               </span>
             </div>
-            <p className="text-xs text-violet-950 dark:text-slate-200 font-bold">
-              Zoological Infrasound & Biological Precursor Network
-            </p>
           </div>
         </div>
 

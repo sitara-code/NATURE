@@ -38,6 +38,14 @@
       "fullName": "Smt. Rajeshwari S. (Executive Director, Mysuru Zoo)",
       "zooId": "zoo-ind-mysuru-02",
       "createdAt": "2026-02-01T00:00:00.000Z"
+    },
+    {
+      "id": "zk-1790347408819-sm0n",
+      "email": "ok@gmail.com",
+      "role": "ZOOKEEPER",
+      "fullName": "ok",
+      "zooId": "zoo-ind-delhi-01",
+      "createdAt": "2026-09-25T14:43:28.820Z"
     }
   ],
   "zoos": [
@@ -245,7 +253,7 @@
       ],
       "verified": true,
       "truthRating": 0,
-      "totalReports": 0,
+      "totalReports": 6,
       "confirmedCorrelations": 0,
       "falseAlarms": 0,
       "createdAt": "2026-02-01T00:00:00.000Z",
@@ -858,6 +866,17 @@
       "createdAt": "2026-09-21T19:09:38.589Z",
       "hasActiveAccessCode": true,
       "lastActiveAt": "2026-09-21T19:09:40.568Z"
+    },
+    {
+      "id": "zk-1790347408819-sm0n",
+      "zooId": "zoo-ind-delhi-01",
+      "fullName": "ok",
+      "badgeNumber": "ok-14",
+      "email": "ok@gmail.com",
+      "active": true,
+      "createdAt": "2026-09-25T14:43:28.820Z",
+      "hasActiveAccessCode": true,
+      "lastActiveAt": "2026-09-25T16:02:10.689Z"
     }
   ],
   "accessCodes": [
@@ -868,9 +887,163 @@
       "codeHash": "0e1fab9e5821e38f1866b103fc147af3a8f7477e80f16bf08e03050a63694130",
       "active": true,
       "createdAt": "2026-09-21T19:09:38.589Z"
+    },
+    {
+      "id": "code-1790347408820",
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "codeHash": "7a965c465f6bbee2fedcfe812a114530aa1ac337d8551c07ae233142ad385bf3",
+      "active": false,
+      "createdAt": "2026-09-25T14:43:28.820Z",
+      "revokedAt": "2026-09-25T16:01:56.095Z"
+    },
+    {
+      "id": "code-1790352116095",
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "codeHash": "55159520833a17c0f82e4d58f5f163a7201005a94be1c03ddf60f2475357062a",
+      "active": true,
+      "createdAt": "2026-09-25T16:01:56.095Z"
     }
   ],
   "observations": [
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Elephant",
+      "totalAnimals": 10,
+      "animalsShowingBehaviour": 7,
+      "durationMinutes": 30,
+      "abnormalityPercentage": 70,
+      "behaviourCategory": "Abnormal grouping",
+      "intensity": 10,
+      "description": "abnormal behavior",
+      "severity": 4,
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "gpsAccuracy": 7655.872213313074,
+      "observedAt": "2026-09-25T16:06:09.354Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790352408139-vx0o",
+      "createdAt": "2026-09-25T16:06:48.139Z"
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Elephant",
+      "totalAnimals": 3,
+      "animalsShowingBehaviour": 1,
+      "durationMinutes": 15,
+      "abnormalityPercentage": 33.33,
+      "behaviourCategory": "Abnormal grouping",
+      "intensity": 3,
+      "description": "asdf",
+      "severity": 2,
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "gpsAccuracy": 7655.872213313074,
+      "observedAt": "2026-09-25T16:05:36.889Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790352346863-qeti",
+      "createdAt": "2026-09-25T16:05:46.863Z"
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Elephant",
+      "totalAnimals": 10,
+      "animalsShowingBehaviour": 7,
+      "durationMinutes": 30,
+      "abnormalityPercentage": 70,
+      "behaviourCategory": "Abnormal grouping",
+      "intensity": 10,
+      "description": "abnormal behavior",
+      "severity": 4,
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "gpsAccuracy": 7655.872213313074,
+      "observedAt": "2026-09-25T16:04:39.126Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790352331839-2xxc",
+      "createdAt": "2026-09-25T16:05:31.839Z"
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Elephant",
+      "totalAnimals": 10,
+      "animalsShowingBehaviour": 7,
+      "durationMinutes": 30,
+      "abnormalityPercentage": 70,
+      "behaviourCategory": "Abnormal grouping",
+      "intensity": 10,
+      "description": "asdf",
+      "severity": 4,
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "gpsAccuracy": 7655.872213313074,
+      "observedAt": "2026-09-25T16:03:09.759Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790352272920-r0b1",
+      "createdAt": "2026-09-25T16:04:32.920Z"
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Elephant",
+      "totalAnimals": 10,
+      "animalsShowingBehaviour": 7,
+      "durationMinutes": 15,
+      "abnormalityPercentage": 70,
+      "behaviourCategory": "Abnormal vocalization",
+      "intensity": 10,
+      "description": "sdf",
+      "severity": 4,
+      "latitude": 28.6042,
+      "longitude": 77.2435,
+      "gpsAccuracy": 7655.872213313074,
+      "observedAt": "2026-09-25T16:02:33.849Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 0,
+      "id": "obs-1790352176324-ovca",
+      "createdAt": "2026-09-25T16:02:56.324Z"
+    },
+    {
+      "zooId": "zoo-ind-delhi-01",
+      "zookeeperId": "zk-1790347408819-sm0n",
+      "zookeeperName": "ok",
+      "zooName": "National Zoological Park (Delhi Zoo)",
+      "species": "Crocodile",
+      "totalAnimals": 5,
+      "animalsShowingBehaviour": 4,
+      "durationMinutes": 15,
+      "abnormalityPercentage": 80,
+      "behaviourCategory": "Unusual silence",
+      "description": "sdf",
+      "severity": 5,
+      "latitude": 28.60433076731154,
+      "longitude": 77.24358822898627,
+      "gpsAccuracy": 8,
+      "observedAt": "2026-09-25T14:45:56.655Z",
+      "verificationStatus": "VERIFIED_IN_GEOFENCE",
+      "geofenceDistanceMeters": 17,
+      "id": "obs-1790347616690-xnes",
+      "createdAt": "2026-09-25T14:46:56.690Z"
+    },
     {
       "zooId": "zoo-sd-01",
       "zookeeperId": "zk-1790017778589-sf9o",
@@ -962,6 +1135,293 @@
   ],
   "riskAnalyses": [
     {
+      "id": "RISK-1790352408141-uxn17",
+      "analysisTime": "2026-09-25T16:06:48.142Z",
+      "eventType": "Storm",
+      "riskScore": 61,
+      "confidence": "High",
+      "observationCount": 6,
+      "zooCount": 1,
+      "speciesCount": 2,
+      "centerLatitude": 28.604222,
+      "centerLongitude": 77.243515,
+      "estimatedRadiusKm": 3.5,
+      "estimatedTimeWindow": "2–5 hours",
+      "explanation": [
+        "Random Forest ML Model evaluated 6 numerical feature vector(s) from ML-ready dataset (RF Score: 58/100, Mean Abnormality: 66%, Mean Duration: 23m).",
+        "6 verified observation(s) from 1 independent zoo institution(s)",
+        "Isolated anomaly from single institution — awaiting corroboration.",
+        "2 animal species exhibiting anomalous behavioral categories (elephant, crocodile)",
+        "Observations concentrated within < 1 km spatial radius",
+        "Temporal window: logged across 80 minutes",
+        "Mean observed severity: 3.8 / 5.0",
+        "1 observation(s) of unusual acoustic silence or suppressed vocalization",
+        "4 observation(s) of defensive herding/unusual animal clustering",
+        "1 report(s) of high-frequency distress vocalization",
+        "Gradual escalation matching atmospheric pressure depression (80 min window)"
+      ],
+      "factors": {
+        "temporalClustering": 10,
+        "spatialClustering": 20,
+        "crossSpeciesAgreement": 12,
+        "observationSeverity": 15,
+        "independentZoos": 8,
+        "environmentalCorroboration": 5,
+        "uncertaintyDeduction": 4
+      },
+      "hazardBreakdown": {
+        "Earthquake": 28,
+        "Storm": 57,
+        "Cyclone": 41,
+        "Wildfire": 25,
+        "Unclassified": 0
+      },
+      "observationsIncluded": [
+        "obs-1790352408139-vx0o",
+        "obs-1790352346863-qeti",
+        "obs-1790352331839-2xxc",
+        "obs-1790352272920-r0b1",
+        "obs-1790352176324-ovca",
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
+      "id": "RISK-1790352346868-ntcb3",
+      "analysisTime": "2026-09-25T16:05:46.868Z",
+      "eventType": "Storm",
+      "riskScore": 60,
+      "confidence": "High",
+      "observationCount": 5,
+      "zooCount": 1,
+      "speciesCount": 2,
+      "centerLatitude": 28.604226,
+      "centerLongitude": 77.243518,
+      "estimatedRadiusKm": 3.5,
+      "estimatedTimeWindow": "2–5 hours",
+      "explanation": [
+        "Random Forest ML Model evaluated 5 numerical feature vector(s) from ML-ready dataset (RF Score: 57/100, Mean Abnormality: 65%, Mean Duration: 21m).",
+        "5 verified observation(s) from 1 independent zoo institution(s)",
+        "Isolated anomaly from single institution — awaiting corroboration.",
+        "2 animal species exhibiting anomalous behavioral categories (elephant, crocodile)",
+        "Observations concentrated within < 1 km spatial radius",
+        "Temporal window: logged across 80 minutes",
+        "Mean observed severity: 3.8 / 5.0",
+        "1 observation(s) of unusual acoustic silence or suppressed vocalization",
+        "3 observation(s) of defensive herding/unusual animal clustering",
+        "1 report(s) of high-frequency distress vocalization",
+        "Gradual escalation matching atmospheric pressure depression (80 min window)"
+      ],
+      "factors": {
+        "temporalClustering": 10,
+        "spatialClustering": 20,
+        "crossSpeciesAgreement": 12,
+        "observationSeverity": 15,
+        "independentZoos": 8,
+        "environmentalCorroboration": 5,
+        "uncertaintyDeduction": 4
+      },
+      "hazardBreakdown": {
+        "Earthquake": 28,
+        "Storm": 57,
+        "Cyclone": 41,
+        "Wildfire": 25,
+        "Unclassified": 0
+      },
+      "observationsIncluded": [
+        "obs-1790352346863-qeti",
+        "obs-1790352331839-2xxc",
+        "obs-1790352272920-r0b1",
+        "obs-1790352176324-ovca",
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
+      "id": "RISK-1790352331847-zawe7",
+      "analysisTime": "2026-09-25T16:05:31.848Z",
+      "eventType": "Storm",
+      "riskScore": 62,
+      "confidence": "High",
+      "observationCount": 4,
+      "zooCount": 1,
+      "speciesCount": 2,
+      "centerLatitude": 28.604233,
+      "centerLongitude": 77.243522,
+      "estimatedRadiusKm": 3.5,
+      "estimatedTimeWindow": "2–5 hours",
+      "explanation": [
+        "Random Forest ML Model evaluated 4 numerical feature vector(s) from ML-ready dataset (RF Score: 63/100, Mean Abnormality: 73%, Mean Duration: 23m).",
+        "4 verified observation(s) from 1 independent zoo institution(s)",
+        "Isolated anomaly from single institution — awaiting corroboration.",
+        "2 animal species exhibiting anomalous behavioral categories (elephant, crocodile)",
+        "Observations concentrated within < 1 km spatial radius",
+        "Temporal window: logged across 79 minutes",
+        "Mean observed severity: 4.3 / 5.0",
+        "1 observation(s) of unusual acoustic silence or suppressed vocalization",
+        "2 observation(s) of defensive herding/unusual animal clustering",
+        "1 report(s) of high-frequency distress vocalization",
+        "Gradual escalation matching atmospheric pressure depression (79 min window)"
+      ],
+      "factors": {
+        "temporalClustering": 10,
+        "spatialClustering": 20,
+        "crossSpeciesAgreement": 12,
+        "observationSeverity": 17,
+        "independentZoos": 8,
+        "environmentalCorroboration": 5,
+        "uncertaintyDeduction": 4
+      },
+      "hazardBreakdown": {
+        "Earthquake": 26,
+        "Storm": 56,
+        "Cyclone": 41,
+        "Wildfire": 20,
+        "Unclassified": 0
+      },
+      "observationsIncluded": [
+        "obs-1790352331839-2xxc",
+        "obs-1790352272920-r0b1",
+        "obs-1790352176324-ovca",
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
+      "id": "RISK-1790352272930-z5xb7",
+      "analysisTime": "2026-09-25T16:04:32.930Z",
+      "eventType": "Storm",
+      "riskScore": 58,
+      "confidence": "Moderate",
+      "observationCount": 3,
+      "zooCount": 1,
+      "speciesCount": 2,
+      "centerLatitude": 28.604244,
+      "centerLongitude": 77.243529,
+      "estimatedRadiusKm": 3.5,
+      "estimatedTimeWindow": "2–5 hours",
+      "explanation": [
+        "Random Forest ML Model evaluated 3 numerical feature vector(s) from ML-ready dataset (RF Score: 64/100, Mean Abnormality: 73%, Mean Duration: 20m).",
+        "3 verified observation(s) from 1 independent zoo institution(s)",
+        "Isolated anomaly from single institution — awaiting corroboration.",
+        "2 animal species exhibiting anomalous behavioral categories (elephant, crocodile)",
+        "Observations concentrated within < 1 km spatial radius",
+        "Temporal window: logged across 77 minutes",
+        "Mean observed severity: 4.3 / 5.0",
+        "1 observation(s) of unusual acoustic silence or suppressed vocalization",
+        "1 observation(s) of defensive herding/unusual animal clustering",
+        "1 report(s) of high-frequency distress vocalization",
+        "Gradual escalation matching atmospheric pressure depression (77 min window)"
+      ],
+      "factors": {
+        "temporalClustering": 10,
+        "spatialClustering": 20,
+        "crossSpeciesAgreement": 12,
+        "observationSeverity": 17,
+        "independentZoos": 8,
+        "environmentalCorroboration": 5,
+        "uncertaintyDeduction": 4
+      },
+      "hazardBreakdown": {
+        "Earthquake": 20,
+        "Storm": 44,
+        "Cyclone": 41,
+        "Wildfire": 10,
+        "Unclassified": 0
+      },
+      "observationsIncluded": [
+        "obs-1790352272920-r0b1",
+        "obs-1790352176324-ovca",
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
+      "id": "RISK-1790352176350-4fzqa",
+      "analysisTime": "2026-09-25T16:02:56.350Z",
+      "eventType": "Cyclone",
+      "riskScore": 55,
+      "confidence": "Moderate",
+      "observationCount": 2,
+      "zooCount": 1,
+      "speciesCount": 2,
+      "centerLatitude": 28.604265,
+      "centerLongitude": 77.243544,
+      "estimatedRadiusKm": 3.5,
+      "estimatedTimeWindow": "Insufficient data for a reliable time-window estimate.",
+      "explanation": [
+        "Random Forest ML Model evaluated 2 numerical feature vector(s) from ML-ready dataset (RF Score: 65/100, Mean Abnormality: 75%, Mean Duration: 15m).",
+        "2 verified observation(s) from 1 independent zoo institution(s)",
+        "Isolated anomaly from single institution — awaiting corroboration.",
+        "2 animal species exhibiting anomalous behavioral categories (elephant, crocodile)",
+        "Observations concentrated within < 1 km spatial radius",
+        "Temporal window: logged across 77 minutes",
+        "Mean observed severity: 4.5 / 5.0",
+        "2 observation(s) rated with high/critical distress severity"
+      ],
+      "factors": {
+        "temporalClustering": 10,
+        "spatialClustering": 20,
+        "crossSpeciesAgreement": 12,
+        "observationSeverity": 18,
+        "independentZoos": 8,
+        "environmentalCorroboration": 5,
+        "uncertaintyDeduction": 10
+      },
+      "hazardBreakdown": {
+        "Earthquake": 14,
+        "Storm": 32,
+        "Cyclone": 40,
+        "Wildfire": 0,
+        "Unclassified": 0
+      },
+      "observationsIncluded": [
+        "obs-1790352176324-ovca",
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
+      "id": "RISK-1790347616698-single",
+      "analysisTime": "2026-09-25T14:46:56.698Z",
+      "eventType": "Unclassified",
+      "riskScore": 25,
+      "confidence": "Low",
+      "observationCount": 1,
+      "zooCount": 1,
+      "speciesCount": 1,
+      "centerLatitude": 28.60433076731154,
+      "centerLongitude": 77.24358822898627,
+      "estimatedRadiusKm": 1,
+      "estimatedTimeWindow": "N/A — Minimum 2 verified observations required for hazard cluster",
+      "explanation": [
+        "1 verified observation in active window.",
+        "No significant cluster detected (clustering threshold requires ≥ 2 verified observations within 15 km and 2 hours).",
+        "ML Pipeline: Random Forest evaluated numerical feature vector (Abnormality: 80%, Duration: 15m, Tree Score: 69/100).",
+        "Isolated anomaly — awaiting corroboration."
+      ],
+      "factors": {
+        "temporalClustering": 5,
+        "spatialClustering": 5,
+        "crossSpeciesAgreement": 0,
+        "observationSeverity": 10,
+        "independentZoos": 0,
+        "environmentalCorroboration": 0,
+        "uncertaintyDeduction": 20
+      },
+      "hazardBreakdown": {
+        "Earthquake": 0,
+        "Storm": 0,
+        "Cyclone": 0,
+        "Wildfire": 0,
+        "Unclassified": 10
+      },
+      "observationsIncluded": [
+        "obs-1790347616690-xnes"
+      ],
+      "modelVersion": "v2.5-random-forest-ensemble-ml"
+    },
+    {
       "id": "RISK-1790017790602-single",
       "analysisTime": "2026-09-21T19:09:50.602Z",
       "eventType": "Unclassified",
@@ -1002,8 +1462,618 @@
       "modelVersion": "v2.5-random-forest-ensemble-ml"
     }
   ],
-  "alerts": [],
+  "alerts": [
+    {
+      "id": "ALERT-1790352408143",
+      "riskAnalysisId": "RISK-1790352408141-uxn17",
+      "title": "BIOLOGICAL ANOMALY WARNING: STORM",
+      "hazard": "Storm",
+      "severity": "Watch",
+      "riskScore": 61,
+      "centerLatitude": 28.604222,
+      "centerLongitude": 77.243515,
+      "radiusKm": 3.5,
+      "polygon": [
+        [
+          28.635698,
+          77.243515
+        ],
+        [
+          28.635093,
+          77.250511
+        ],
+        [
+          28.633302,
+          77.257239
+        ],
+        [
+          28.630392,
+          77.263438
+        ],
+        [
+          28.626477,
+          77.268872
+        ],
+        [
+          28.621706,
+          77.27333
+        ],
+        [
+          28.616263,
+          77.276642
+        ],
+        [
+          28.610358,
+          77.27868
+        ],
+        [
+          28.604217,
+          77.279367
+        ],
+        [
+          28.598077,
+          77.278676
+        ],
+        [
+          28.592173,
+          77.276634
+        ],
+        [
+          28.586731,
+          77.27332
+        ],
+        [
+          28.581963,
+          77.268861
+        ],
+        [
+          28.578049,
+          77.263428
+        ],
+        [
+          28.575141,
+          77.257231
+        ],
+        [
+          28.57335,
+          77.250507
+        ],
+        [
+          28.572746,
+          77.243515
+        ],
+        [
+          28.57335,
+          77.236523
+        ],
+        [
+          28.575141,
+          77.229799
+        ],
+        [
+          28.578049,
+          77.223602
+        ],
+        [
+          28.581963,
+          77.218169
+        ],
+        [
+          28.586731,
+          77.21371
+        ],
+        [
+          28.592173,
+          77.210396
+        ],
+        [
+          28.598077,
+          77.208354
+        ],
+        [
+          28.604217,
+          77.207663
+        ],
+        [
+          28.610358,
+          77.20835
+        ],
+        [
+          28.616263,
+          77.210388
+        ],
+        [
+          28.621706,
+          77.2137
+        ],
+        [
+          28.626477,
+          77.218158
+        ],
+        [
+          28.630392,
+          77.223592
+        ],
+        [
+          28.633302,
+          77.229791
+        ],
+        [
+          28.635093,
+          77.236519
+        ]
+      ],
+      "message": "CRITICAL BIOLOGICAL EARLY WARNING\nPotential hazard: Storm\nModel-estimated risk: 61%\nEstimated area: 3.5 km radius\nEstimated time window: 2–5 hours\nPlease follow official emergency instructions.\nModel-generated early warning. Follow official emergency services and government alerts.",
+      "createdAt": "2026-09-25T16:06:48.145Z",
+      "targetedCitizensCount": 0,
+      "smsDispatchStatus": "NO_CITIZENS_IN_ZONE",
+      "smsProviderNote": "No citizens located inside current risk perimeter. No SMS required."
+    },
+    {
+      "id": "ALERT-1790352346874",
+      "riskAnalysisId": "RISK-1790352346868-ntcb3",
+      "title": "BIOLOGICAL ANOMALY WARNING: STORM",
+      "hazard": "Storm",
+      "severity": "Watch",
+      "riskScore": 60,
+      "centerLatitude": 28.604226,
+      "centerLongitude": 77.243518,
+      "radiusKm": 3.5,
+      "polygon": [
+        [
+          28.635702,
+          77.243518
+        ],
+        [
+          28.635097,
+          77.250514
+        ],
+        [
+          28.633306,
+          77.257242
+        ],
+        [
+          28.630396,
+          77.263441
+        ],
+        [
+          28.626481,
+          77.268875
+        ],
+        [
+          28.62171,
+          77.273333
+        ],
+        [
+          28.616267,
+          77.276645
+        ],
+        [
+          28.610362,
+          77.278683
+        ],
+        [
+          28.604221,
+          77.27937
+        ],
+        [
+          28.598081,
+          77.278679
+        ],
+        [
+          28.592177,
+          77.276637
+        ],
+        [
+          28.586735,
+          77.273323
+        ],
+        [
+          28.581967,
+          77.268864
+        ],
+        [
+          28.578053,
+          77.263431
+        ],
+        [
+          28.575145,
+          77.257234
+        ],
+        [
+          28.573354,
+          77.25051
+        ],
+        [
+          28.57275,
+          77.243518
+        ],
+        [
+          28.573354,
+          77.236526
+        ],
+        [
+          28.575145,
+          77.229802
+        ],
+        [
+          28.578053,
+          77.223605
+        ],
+        [
+          28.581967,
+          77.218172
+        ],
+        [
+          28.586735,
+          77.213713
+        ],
+        [
+          28.592177,
+          77.210399
+        ],
+        [
+          28.598081,
+          77.208357
+        ],
+        [
+          28.604221,
+          77.207666
+        ],
+        [
+          28.610362,
+          77.208353
+        ],
+        [
+          28.616267,
+          77.210391
+        ],
+        [
+          28.62171,
+          77.213703
+        ],
+        [
+          28.626481,
+          77.218161
+        ],
+        [
+          28.630396,
+          77.223595
+        ],
+        [
+          28.633306,
+          77.229794
+        ],
+        [
+          28.635097,
+          77.236522
+        ]
+      ],
+      "message": "CRITICAL BIOLOGICAL EARLY WARNING\nPotential hazard: Storm\nModel-estimated risk: 60%\nEstimated area: 3.5 km radius\nEstimated time window: 2–5 hours\nPlease follow official emergency instructions.\nModel-generated early warning. Follow official emergency services and government alerts.",
+      "createdAt": "2026-09-25T16:05:46.874Z",
+      "targetedCitizensCount": 0,
+      "smsDispatchStatus": "NO_CITIZENS_IN_ZONE",
+      "smsProviderNote": "No citizens located inside current risk perimeter. No SMS required."
+    },
+    {
+      "id": "ALERT-1790352331849",
+      "riskAnalysisId": "RISK-1790352331847-zawe7",
+      "title": "BIOLOGICAL ANOMALY WARNING: STORM",
+      "hazard": "Storm",
+      "severity": "Watch",
+      "riskScore": 62,
+      "centerLatitude": 28.604233,
+      "centerLongitude": 77.243522,
+      "radiusKm": 3.5,
+      "polygon": [
+        [
+          28.635709,
+          77.243522
+        ],
+        [
+          28.635104,
+          77.250518
+        ],
+        [
+          28.633313,
+          77.257246
+        ],
+        [
+          28.630403,
+          77.263445
+        ],
+        [
+          28.626488,
+          77.268879
+        ],
+        [
+          28.621717,
+          77.273337
+        ],
+        [
+          28.616274,
+          77.276649
+        ],
+        [
+          28.610369,
+          77.278687
+        ],
+        [
+          28.604228,
+          77.279374
+        ],
+        [
+          28.598088,
+          77.278683
+        ],
+        [
+          28.592184,
+          77.276641
+        ],
+        [
+          28.586742,
+          77.273327
+        ],
+        [
+          28.581974,
+          77.268868
+        ],
+        [
+          28.57806,
+          77.263435
+        ],
+        [
+          28.575152,
+          77.257238
+        ],
+        [
+          28.573361,
+          77.250514
+        ],
+        [
+          28.572757,
+          77.243522
+        ],
+        [
+          28.573361,
+          77.23653
+        ],
+        [
+          28.575152,
+          77.229806
+        ],
+        [
+          28.57806,
+          77.223609
+        ],
+        [
+          28.581974,
+          77.218176
+        ],
+        [
+          28.586742,
+          77.213717
+        ],
+        [
+          28.592184,
+          77.210403
+        ],
+        [
+          28.598088,
+          77.208361
+        ],
+        [
+          28.604228,
+          77.20767
+        ],
+        [
+          28.610369,
+          77.208357
+        ],
+        [
+          28.616274,
+          77.210395
+        ],
+        [
+          28.621717,
+          77.213707
+        ],
+        [
+          28.626488,
+          77.218165
+        ],
+        [
+          28.630403,
+          77.223599
+        ],
+        [
+          28.633313,
+          77.229798
+        ],
+        [
+          28.635104,
+          77.236526
+        ]
+      ],
+      "message": "CRITICAL BIOLOGICAL EARLY WARNING\nPotential hazard: Storm\nModel-estimated risk: 62%\nEstimated area: 3.5 km radius\nEstimated time window: 2–5 hours\nPlease follow official emergency instructions.\nModel-generated early warning. Follow official emergency services and government alerts.",
+      "createdAt": "2026-09-25T16:05:31.850Z",
+      "targetedCitizensCount": 0,
+      "smsDispatchStatus": "NO_CITIZENS_IN_ZONE",
+      "smsProviderNote": "No citizens located inside current risk perimeter. No SMS required."
+    }
+  ],
   "auditLogs": [
+    {
+      "id": "audit-1790352408148-ghow",
+      "timestamp": "2026-09-25T16:06:48.148Z",
+      "actorRole": "ALERT_ENGINE",
+      "actorId": "system-alert",
+      "actorName": "Sentinel Alert Engine",
+      "action": "ALERT_DISPATCHED",
+      "details": "Alert dispatched for Storm. Targeted citizens: 0. SMS status: SENT. Provider: No citizens located inside current risk perimeter. No SMS required."
+    },
+    {
+      "id": "audit-1790352408140-yc6a",
+      "timestamp": "2026-09-25T16:06:48.140Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Elephant (Abnormal grouping) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352346875-5coy",
+      "timestamp": "2026-09-25T16:05:46.875Z",
+      "actorRole": "ALERT_ENGINE",
+      "actorId": "system-alert",
+      "actorName": "Sentinel Alert Engine",
+      "action": "ALERT_DISPATCHED",
+      "details": "Alert dispatched for Storm. Targeted citizens: 0. SMS status: SENT. Provider: No citizens located inside current risk perimeter. No SMS required."
+    },
+    {
+      "id": "audit-1790352346864-f5gx",
+      "timestamp": "2026-09-25T16:05:46.864Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Elephant (Abnormal grouping) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352331850-019w",
+      "timestamp": "2026-09-25T16:05:31.850Z",
+      "actorRole": "ALERT_ENGINE",
+      "actorId": "system-alert",
+      "actorName": "Sentinel Alert Engine",
+      "action": "ALERT_DISPATCHED",
+      "details": "Alert dispatched for Storm. Targeted citizens: 0. SMS status: SENT. Provider: No citizens located inside current risk perimeter. No SMS required."
+    },
+    {
+      "id": "audit-1790352331842-kdxc",
+      "timestamp": "2026-09-25T16:05:31.842Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Elephant (Abnormal grouping) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352272923-wx26",
+      "timestamp": "2026-09-25T16:04:32.923Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Elephant (Abnormal grouping) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352176333-qo55",
+      "timestamp": "2026-09-25T16:02:56.333Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Elephant (Abnormal vocalization) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352130690-yp2v",
+      "timestamp": "2026-09-25T16:02:10.690Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "ZOOKEEPER_LOGIN",
+      "details": "Zookeeper authenticated for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790352116097-7m5h",
+      "timestamp": "2026-09-25T16:01:56.097Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "REGENERATE_ACCESS_CODE",
+      "details": "Regenerated access code for ok (ok-14)"
+    },
+    {
+      "id": "audit-1790352108526-inos",
+      "timestamp": "2026-09-25T16:01:48.526Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "ZOO_ADMIN_LOGIN",
+      "details": "Successful login for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790350486498-n8j9",
+      "timestamp": "2026-09-25T15:34:46.499Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "GEOFENCE_REJECTION",
+      "details": "Observation rejected: GPS coordinates [22.5575, 88.3753] are 1302260m from National Zoological Park (Delhi Zoo) center (perimeter radius: 1500m)."
+    },
+    {
+      "id": "audit-1790347616692-7lrb",
+      "timestamp": "2026-09-25T14:46:56.692Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "SUBMIT_OBSERVATION",
+      "details": "Observation recorded: Crocodile (Unusual silence) at National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790347545287-1k52",
+      "timestamp": "2026-09-25T14:45:45.287Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "ZOOKEEPER_LOGIN",
+      "details": "Zookeeper authenticated for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790347479387-5b5o",
+      "timestamp": "2026-09-25T14:44:39.387Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "GEOFENCE_REJECTION",
+      "details": "Observation rejected: GPS coordinates [22.5575, 88.3753] are 1302260m from National Zoological Park (Delhi Zoo) center (perimeter radius: 1500m)."
+    },
+    {
+      "id": "audit-1790347453134-9gwd",
+      "timestamp": "2026-09-25T14:44:13.134Z",
+      "actorRole": "ZOOKEEPER",
+      "actorId": "zk-1790347408819-sm0n",
+      "actorName": "ok",
+      "action": "ZOOKEEPER_LOGIN",
+      "details": "Zookeeper authenticated for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790347408821-u9na",
+      "timestamp": "2026-09-25T14:43:28.821Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "CREATE_ZOOKEEPER",
+      "details": "Created zookeeper ok (ok-14) with generated access code."
+    },
+    {
+      "id": "audit-1790347391293-2pf3",
+      "timestamp": "2026-09-25T14:43:11.293Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "ZOO_ADMIN_LOGIN",
+      "details": "Successful login for National Zoological Park (Delhi Zoo)"
+    },
+    {
+      "id": "audit-1790347384733-0y89",
+      "timestamp": "2026-09-25T14:43:04.733Z",
+      "actorRole": "ZOO_ADMIN",
+      "actorId": "user-admin-delhi",
+      "actorName": "Dr. Ramesh Kumar (Director, Delhi Zoo)",
+      "action": "ZOO_ADMIN_LOGIN",
+      "details": "Successful login for National Zoological Park (Delhi Zoo)"
+    },
     {
       "id": "audit-1790256390932-e14y",
       "timestamp": "2026-09-24T13:26:30.932Z",

@@ -16,7 +16,8 @@ import { Alert, User, ALLOWED_ANIMALS, ALLOWED_BEHAVIOURS } from './src/types.js
 
 const app = express();
 const PORT = 3000;
-const FASTAPI_URL = process.env.FASTAPI_URL || 'http://127.0.0.1:8000/process-observation';
+const FASTAPI_PREDICT_URL = 'https://zoo-sentinel-server.onrender.com/predict';
+const FASTAPI_EMAIL_URL = 'https://zoo-sentinel-server.onrender.com/sendEmail';
 const OBSERVATION_HAZARD_PROBABILITY_DIR = path.join(
   process.cwd(),
   'data',
@@ -63,12 +64,25 @@ const upload = multer({
   },
 });
 
-async function processObservationWithFastAPI(observation: object & { id: string }): Promise<void> {
+async function predictObservationWithFastAPI(observation: {
+  id: string;
+  species: string;
+  behaviourCategory: string;
+  severity: number;
+  abnormalityPercentage?: number;
+  durationMinutes?: number;
+}): Promise<void> {
   try {
-    const response = await fetch(FASTAPI_URL, {
+    const response = await fetch(FASTAPI_PREDICT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(observation),
+      body: JSON.stringify({
+        animal: observation.species,
+        behaviour: observation.behaviourCategory,
+        intensity: observation.severity,
+        abnormality_percentage: Number(observation.abnormalityPercentage),
+        duration_minutes: Number(observation.durationMinutes),
+      }),
       signal: AbortSignal.timeout(10_000),
     });
 
@@ -76,20 +90,40 @@ async function processObservationWithFastAPI(observation: object & { id: string 
       throw new Error(`FastAPI returned HTTP ${response.status}`);
     }
 
-    const result = (await response.json()) as {
-      observationHazardProbability?: unknown;
-    };
-    const hazardProbability = result.observationHazardProbability;
+    const result = (await response.json()) as Record<string, unknown>;
+    const hazardProbability = result.observationHazardProbability ?? result.hazard_probability;
 
-    if (!hazardProbability || typeof hazardProbability !== 'object' || Array.isArray(hazardProbability)) {
-      throw new Error('FastAPI response did not contain a valid observationHazardProbability object');
+    if (hazardProbability === undefined || hazardProbability === null) {
+      throw new Error('FastAPI response did not contain observationHazardProbability or hazard_probability');
     }
 
     const outputPath = path.join(OBSERVATION_HAZARD_PROBABILITY_DIR, `${observation.id}.json`);
-    fs.writeFileSync(outputPath, `${JSON.stringify(hazardProbability, null, 2)}\n`, 'utf8');
+    fs.writeFileSync(outputPath, `${JSON.stringify(result, null, 2)}\n`, 'utf8');
     console.log(`[FastAPI] Saved observation hazard probability to ${outputPath}`);
   } catch (err: any) {
-    console.error(`[FastAPI] Failed to process observation ${observation.id}:`, err.message || err);
+    console.error(`[FastAPI] Failed to predict observation ${observation.id}:`, err.message || err);
+  }
+}
+
+async function sendObservationEmailWithFastAPI(observationId: string): Promise<void> {
+  try {
+    const response = await fetch(FASTAPI_EMAIL_URL, {
+      method: 'GET',
+      signal: AbortSignal.timeout(10_000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`FastAPI email endpoint returned HTTP ${response.status}`);
+    }
+
+    const result = (await response.json()) as { status?: unknown };
+    if (typeof result.status !== 'string' || result.status.length === 0) {
+      throw new Error('FastAPI email response did not contain a valid status');
+    }
+
+    console.log(`[FastAPI] Email notification sent for observation ${observationId}: ${result.status}`);
+  } catch (err: any) {
+    console.error(`[FastAPI] Failed to send email for observation ${observationId}:`, err.message || err);
   }
 }
 
@@ -921,7 +955,8 @@ app.post('/api/observations', requireAuth, async (req, res) => {
     const observationMlCsv = convertObservationsToMLCSV([observation]);
     const rfResult = randomForestModel.predictFromCSV(observationMlCsv);
 
-    await processObservationWithFastAPI(observation);
+    await predictObservationWithFastAPI(observation);
+    await sendObservationEmailWithFastAPI(observation.id);
 
     res.json({
       success: true,

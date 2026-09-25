@@ -68,6 +68,7 @@ async function predictObservationWithFastAPI(observation: {
   id: string;
   species: string;
   behaviourCategory: string;
+  intensity?: number;
   severity: number;
   abnormalityPercentage?: number;
   durationMinutes?: number;
@@ -79,7 +80,7 @@ async function predictObservationWithFastAPI(observation: {
       body: JSON.stringify({
         animal: observation.species,
         behaviour: observation.behaviourCategory,
-        intensity: observation.severity,
+        intensity: Number(observation.intensity),
         abnormality_percentage: Number(observation.abnormalityPercentage),
         duration_minutes: Number(observation.durationMinutes),
       }),
@@ -702,6 +703,7 @@ app.post('/api/observations', requireAuth, async (req, res) => {
       animalsShowingBehaviour,
       durationMinutes,
       behaviourCategory,
+      intensity,
       description,
       severity,
       mediaUrl,
@@ -753,6 +755,14 @@ app.post('/api/observations', requireAuth, async (req, res) => {
       return res.status(400).json({
         success: false,
         error: 'Duration for which the behaviour was shown must be a number of at least 1 minute.',
+      });
+    }
+
+    const intensityNum = Number(intensity);
+    if (!Number.isInteger(intensityNum) || intensityNum < 1 || intensityNum > 10) {
+      return res.status(400).json({
+        success: false,
+        error: 'Observation intensity must be an integer between 1 and 10.',
       });
     }
 
@@ -822,6 +832,7 @@ app.post('/api/observations', requireAuth, async (req, res) => {
       durationMinutes: durationNum,
       abnormalityPercentage,
       behaviourCategory,
+      intensity: intensityNum,
       description: description || '',
       severity: evaluatedSeverity,
       mediaUrl,

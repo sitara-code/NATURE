@@ -230,7 +230,7 @@ export const api = {
     durationMinutes: number;
     abnormalityPercentage?: number;
     behaviourCategory: string;
-    intensity?: number;
+    intensity: number;
     description: string;
     severity?: number;
     latitude: number;

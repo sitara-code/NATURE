@@ -63,6 +63,7 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
   const [animalsShowingBehaviour, setAnimalsShowingBehaviour] = useState<number | ''>('');
   const [durationMinutes, setDurationMinutes] = useState<number | ''>(15);
   const [behaviourCategory, setBehaviourCategory] = useState<BehaviourCategory>('Sudden fleeing');
+  const [intensity, setIntensity] = useState<number>(3);
   const [description, setDescription] = useState('');
   const [severity, setSeverity] = useState<SeverityLevel>(3);
   const [mediaFile, setMediaFile] = useState<File | null>(null);
@@ -247,6 +248,7 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
         durationMinutes: durationNum,
         abnormalityPercentage: calculatedPct,
         behaviourCategory,
+        intensity,
         description: description.trim(),
         severity: evaluatedSeverity,
         latitude: gpsData.latitude,
@@ -270,6 +272,7 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
         setTotalAnimals('');
         setAnimalsShowingBehaviour('');
         setDurationMinutes(15);
+        setIntensity(3);
         setDescription('');
         setSeverity(3);
         setMediaFile(null);
@@ -729,6 +732,25 @@ export const ReportAnomalyModal: React.FC<ReportAnomalyModalProps> = ({
           </div>
 
           {/* Detailed Observation Description */}
+          <div>
+            <label htmlFor="select-obs-intensity" className="block text-blue-950 dark:text-slate-300 mb-1 font-bold">
+              Observation Intensity *
+            </label>
+            <select
+              id="select-obs-intensity"
+              required
+              value={intensity}
+              onChange={(e) => setIntensity(Number(e.target.value))}
+              className="w-full bg-sky-50 dark:bg-[#060e0a] border border-teal-200 dark:border-emerald-950 rounded-xl px-3 py-2 text-blue-950 dark:text-white focus:outline-none focus:border-teal-600 focus:bg-white dark:focus:bg-[#0c1a14] font-medium"
+            >
+              {Array.from({ length: 10 }, (_, index) => index + 1).map((level) => (
+                <option key={level} value={level}>
+                  {level} - {level === 1 ? 'Low' : level === 2 ? 'Mild' : level === 3 ? 'Moderate' : level === 4 ? 'High' : level === 5 ? 'Extreme' : 'Very high'}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div>
             <label htmlFor="input-obs-desc" className="block text-blue-950 dark:text-slate-300 mb-1 font-bold">
               Detailed Observation Description *
